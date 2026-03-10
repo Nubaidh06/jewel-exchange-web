@@ -1,0 +1,33 @@
+# Jewel Exchange - robots.txt
+# Controls search engine crawler access
+
+# Allow all crawlers by default
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Disallow specific file types if needed
+Disallow: /*.pdf$
+
+# Sitemap location
+Sitemap: https://jewelexchange.lk/sitemap.xml
+# Update the domain above to your actual domain
+
+# Crawl delay for heavy crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /

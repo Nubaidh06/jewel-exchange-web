@@ -1,0 +1,676 @@
+/* --- 16. LUXURY SHOWCASE PAGES (JEWELRY & GEMSTONES) --- */
+
+/* Premium Hero Section */
+.luxury-showcase-hero {
+    padding: 42px 0 34px;
+    background:
+        radial-gradient(900px 220px at 50% -120px, rgba(197, 160, 89, 0.12), transparent 70%),
+        linear-gradient(135deg, var(--off-white) 0%, #fffdfa 100%);
+    border-bottom: 1px solid var(--light-gray);
+    position: relative;
+}
+
+.luxury-showcase-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(1100px, 94vw);
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent 0%, rgba(197, 160, 89, 0.55) 50%, transparent 100%);
+}
+
+.luxury-showcase-hero .container-narrow {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.showcase-hero-content {
+    text-align: center;
+}
+
+.showcase-hero-title {
+    font-size: 3.6rem;
+    margin: 10px 0 18px;
+    line-height: 1.1;
+    color: var(--dark-charcoal);
+}
+
+.showcase-hero-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Trust Section */
+.luxury-trust-section {
+    padding: 80px 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.trust-items-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-icon {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trust-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-charcoal);
+}
+
+.trust-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Main Collection Layout */
+.luxury-collection-main {
+    padding: 56px 0;
+    background: var(--white);
+}
+
+.collection-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+}
+
+.collection-sidebar {
+    position: sticky;
+    top: 140px;
+    height: fit-content;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.sidebar-header h3 {
+    font-size: 1.2rem;
+    color: var(--dark-charcoal);
+}
+
+.filter-toggle-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.clear-filters-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: var(--primary-gold);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.clear-filters-btn.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.filter-group {
+    margin-bottom: 35px;
+}
+
+.filter-group h4 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--dark-charcoal);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    transition: 0.3s;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.filter-options label:hover {
+    color: var(--dark-charcoal);
+    background: var(--off-white);
+}
+
+.filter-options input[type="radio"] {
+    accent-color: var(--primary-gold);
+    cursor: pointer;
+}
+
+.collection-grid-wrapper {
+    width: 100%;
+}
+
+.luxury-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    padding: 0;
+}
+
+/* Enhanced Jewelry Card */
+.jewelry-card {
+    transition: var(--transition);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background: var(--off-white);
+    margin-bottom: 20px;
+    border: 1px solid var(--light-gray);
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+    padding: 15px;
+}
+
+.jewelry-card:hover .card-img img {
+    transform: scale(1.08);
+}
+
+.jewelry-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--dark-charcoal);
+    line-height: 1.4;
+}
+
+.card-info .card-spec {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-info .card-details {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.inquire-btn {
+    margin-top: auto;
+    padding: 12px 20px;
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+    font-weight: 600;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inquire-btn:hover {
+    background: var(--primary-gold);
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* Enhanced Detail Drawer */
+.detail-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 500px;
+    height: 100%;
+    background: var(--white);
+    z-index: 11000;
+    box-shadow: -15px 0 50px rgba(0,0,0,0.15);
+    transition: var(--transition);
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.detail-drawer.active {
+    right: 0;
+}
+
+.drawer-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--dark-charcoal);
+    transition: 0.3s;
+    line-height: 1;
+}
+
+.drawer-close:hover {
+    color: var(--primary-gold);
+}
+
+.drawer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.drawer-image-wrapper {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background: var(--off-white);
+    margin-bottom: 10px;
+    border: 1px solid var(--light-gray);
+}
+
+.drawer-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.drawer-text-stack h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.drawer-description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.drawer-description p {
+    margin-bottom: 15px;
+}
+
+.drawer-specs {
+    background: var(--off-white);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.spec-item {
+    font-size: 0.85rem;
+}
+
+.spec-item strong {
+    color: var(--dark-charcoal);
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.spec-item span {
+    color: var(--text-muted);
+}
+
+.btn-gold {
+    background: var(--primary-gold);
+    color: white;
+    padding: 16px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.btn-gold:hover {
+    background: var(--dark-charcoal);
+    letter-spacing: 3px;
+}
+
+/* Responsive Luxury Pages */
+@media (max-width: 1024px) {
+    .collection-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .filter-group {
+        margin-bottom: 0;
+    }
+
+    .sidebar-header {
+        grid-column: 1 / -1;
+    }
+
+    .luxury-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+
+    .trust-items-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .showcase-hero-title {
+        font-size: 3.2rem;
+    }
+
+    .detail-drawer {
+        width: 100%;
+        padding: 60px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-showcase-hero {
+        padding: 20px 0 16px;
+    }
+
+    .luxury-showcase-hero .container-narrow {
+        padding: 0 4%;
+    }
+
+    .showcase-hero-title {
+        font-size: 1.55rem;
+        margin: 4px 0 6px;
+    }
+
+    .showcase-hero-desc {
+        font-size: 0.84rem;
+        max-width: 96%;
+        line-height: 1.45;
+    }
+
+    .luxury-collection-main {
+        padding: 26px 0 40px;
+        background: linear-gradient(to bottom, #fffdf9 0%, #f8f5ee 100%);
+    }
+
+    .luxury-collection-main .container {
+        width: 96%;
+        max-width: none;
+    }
+
+    .collection-layout {
+        gap: 0px;
+    }
+
+    .collection-sidebar {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        position: static;
+        background: var(--white);
+        border: 1px solid rgba(197, 160, 89, 0.38);
+        border-radius: 8px;
+        padding: 9px 10px 8px;
+        box-shadow: 0 6px 16px rgba(26, 26, 26, 0.07);
+    }
+
+    .sidebar-header {
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .sidebar-header h3 {
+        width: auto;
+        margin: 0;
+        font-size: 0.72rem;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: #7a725f;
+    }
+
+    .filter-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding: 7px 10px;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        letter-spacing: 1.1px;
+    }
+
+    .collection-sidebar.mobile-filters-collapsed .filter-group {
+        display: none;
+    }
+
+    .collection-sidebar.mobile-filters-collapsed .clear-filters-btn {
+        display: none;
+    }
+
+    .clear-filters-btn {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        opacity: 0.8;
+    }
+
+    .filter-group {
+        margin: 2px 0 0;
+        padding-top: 12px;
+        border-top: 1px solid #efe9dc;
+    }
+
+    .filter-group h4 {
+        font-size: 0.72rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 10px;
+    }
+
+    .filter-options {
+        gap: 8px;
+    }
+
+    .filter-options label {
+        font-size: 0.84rem;
+        padding: 8px 10px;
+        background: #faf8f3;
+        border: 1px solid #ece4d4;
+    }
+
+    .luxury-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    /* Dynamic card layout used by jewelry/gemstone listings */
+    .luxury-grid .product-card {
+        border: 1px solid var(--light-gray);
+        box-shadow: 0 6px 14px rgba(26, 26, 26, 0.06);
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .luxury-grid .product-card:active {
+        transform: scale(0.985);
+        box-shadow: 0 3px 10px rgba(26, 26, 26, 0.1);
+    }
+
+    .luxury-grid .product-image-wrapper {
+        height: 280px;
+        border-bottom: 1px solid #f0ece2;
+    }
+
+    .luxury-grid .product-info {
+        padding: 14px 14px 12px;
+    }
+
+    .luxury-grid .product-name {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+        line-height: 1.35;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .luxury-grid .product-price {
+        font-size: 0.92rem;
+        margin-bottom: 0;
+        letter-spacing: 0.3px;
+    }
+
+    .luxury-grid .product-desc,
+    .luxury-grid .stone-meta {
+        display: none;
+    }
+
+    .luxury-grid .view-detail-btn {
+        display: none;
+    }
+
+    .luxury-grid .product-info::after {
+        content: "Tap for details";
+        display: block;
+        margin-top: 7px;
+        font-size: 0.64rem;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #8f866f;
+    }
+
+    .detail-drawer {
+        top: 0;
+        height: 100dvh;
+        padding: calc(env(safe-area-inset-top, 0px) + 50px) 20px 20px;
+    }
+
+    .drawer-image-wrapper {
+        height: 200px;
+    }
+
+    .drawer-close {
+        top: calc(env(safe-area-inset-top, 0px) + 12px);
+        right: 20px;
+        font-size: 2rem;
+    }
+
+    .drawer-text-stack h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxury-collection-main .container {
+        width: 98%;
+    }
+
+    .luxury-grid {
+        gap: 12px;
+    }
+
+    .luxury-grid .product-image-wrapper {
+        height: 235px;
+    }
+
+    .luxury-grid .product-info {
+        padding: 13px 12px 11px;
+    }
+
+    .luxury-grid .product-name {
+        font-size: 0.98rem;
+    }
+
+    .luxury-grid .product-price {
+        font-size: 0.86rem;
+    }
+
+    .luxury-grid .product-info::after {
+        font-size: 0.6rem;
+    }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Royal Blue Sapphire",
+    "category": "blue-sapphire",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 21 - 01.png",
+    "weight": "4.12 Carats",
+    "origin": "Ratnapura, Sri Lanka",
+    "treatment": "Unheated / Natural",
+    "certification": "GIA / NGJA Certified",
+    "description": "An exceptional 'Royal Blue' specimen with vivid saturation and eye-clean clarity. Precision cushion cut to maximize internal brilliance."
+  },
+  {
+    "id": 2,
+    "name": "Sunset Padparadscha",
+    "category": "fancy-sapphire",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 06 - 01.png",
+    "weight": "2.45 Carats",
+    "origin": "Pelmadulla, Sri Lanka",
+    "treatment": "Standard Heat Only",
+    "certification": "GRS Certified",
+    "description": "The rarest of sapphires. A perfect 50/50 delicate balance of lotus-pink and orange hues. Oval brilliant cut."
+  },
+  {
+    "id": 3,
+    "name": "Vivid Ceylon Ruby",
+    "category": "ruby",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 01 - 07.png",
+    "weight": "1.89 Carats",
+    "origin": "Sri Lanka",
+    "treatment": "Unheated",
+    "certification": "GIA Certified",
+    "description": "A rare Sri Lankan ruby featuring a vibrant 'Pigeon Blood' red hue. Minimal inclusions, excellent transparency."
+  },
+  {
+    "id": 4,
+    "name": "Teal Parti Sapphire",
+    "category": "fancy-sapphire",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 01 - 02.png",
+    "weight": "3.20 Carats",
+    "origin": "Elahera, Sri Lanka",
+    "treatment": "Natural / Unheated",
+    "certification": "NGJA Certified",
+    "description": "Unique bi-color zoning of deep forest green and ocean blue. A modern choice for bespoke engagement rings."
+  },
+  {
+    "id": 5,
+    "name": "Cornflower Blue Sapphire",
+    "category": "blue-sapphire",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 19 - 01.png",
+    "weight": "2.75 Carats",
+    "origin": "Ratnapura, Sri Lanka",
+    "treatment": "Standard Heat",
+    "certification": "GIC Certified",
+    "description": "Classic 'Cornflower' blue with a velvety appearance. Heart-shaped cut with excellent proportions."
+  },
+  {
+    "id": 6,
+    "name": "Color-Change Alexandrite",
+    "category": "alexandrite",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 15 - 02.png",
+    "weight": "1.15 Carats",
+    "origin": "Sri Lanka",
+    "treatment": "None",
+    "certification": "Gubelin Certified",
+    "description": "A true phenomenon stone. Shifts from a deep forest green in daylight to a purplish-red under incandescent light."
+  },
+  {
+    "id": 7,
+    "name": "Chrome Green Tourmaline",
+    "category": "emerald",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 03 - 02.png",
+    "weight": "5.40 Carats",
+    "origin": "Sri Lanka",
+    "treatment": "None",
+    "certification": "Local Lab Certified",
+    "description": "Intense neon-green saturation often mistaken for fine emerald. Emerald-cut for a classic architectural look."
+  },
+  {
+    "id": 8,
+    "name": "Cobalt Blue Spinel",
+    "category": "spinel",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 03 - 03.png",
+    "weight": "2.10 Carats",
+    "origin": "Sri Lanka",
+    "treatment": "None",
+    "certification": "NGJA Certified",
+    "description": "A collector's favorite. Electric blue spinel with high refractive index and diamond-like luster."
+  },
+  {
+    "id": 9,
+    "name": "Golden Yellow Sapphire",
+    "category": "fancy-sapphire",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 08 - 03.png",
+    "weight": "4.80 Carats",
+    "origin": "Sri Lanka",
+    "treatment": "Standard Heat",
+    "certification": "NGJA Certified",
+    "description": "A bright, sunny 'Canary' yellow sapphire. Radiant cut to enhance the stone's natural dispersion."
+  }
+]

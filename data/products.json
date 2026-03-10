@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "The Midnight Heirloom",
+    "category": "midnight",
+    "type": "rings",
+    "material": "gold",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 08 - 01.png",
+    "description": "A deep-set Ceylon Blue Sapphire surrounded by a halo of micro-pave diamonds. Hand-forged in 18k White Gold."
+  },
+  {
+    "id": 2,
+    "name": "Island Aura Solitaire",
+    "category": "aura",
+    "type": "pendants",
+    "material": "silver",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 12 - 02.png",
+    "description": "Inspired by the Sri Lankan coastline. A minimalist pendant featuring a rare 2ct Pear-cut Aquamarine."
+  },
+  {
+    "id": 3,
+    "name": "Royal Ceylon Band",
+    "category": "royal",
+    "type": "rings",
+    "material": "gold",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 06 - 02.png",
+    "description": "Traditional 22k Yellow Gold band featuring intricate hand-carved filigree work by our master craftsmen."
+  },
+  {
+    "id": 4,
+    "name": "The Azure Marquise",
+    "category": "midnight",
+    "type": "rings",
+    "material": "gems",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 03 - 01.png",
+    "description": "An elongated Marquise-cut Sapphire that creates a striking silhouette, set in a modern minimalist shank."
+  },
+  {
+    "id": 5,
+    "name": "Lanka Glow Studs",
+    "category": "aura",
+    "type": "earrings",
+    "material": "gold",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 12 - 01.png",
+    "description": "Dainty 18k Rose Gold studs featuring brilliant-cut Padparadscha spinels for a soft, sunrise-inspired hue."
+  },
+  {
+    "id": 6,
+    "name": "Sovereign Ruby Drop",
+    "category": "royal",
+    "type": "pendants",
+    "material": "gems",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 05 - 01.png",
+    "description": "A museum-quality unheated Ceylon Ruby drop pendant. A true collector's piece with GRS certification."
+  },
+  {
+    "id": 7,
+    "name": "Midnight Galaxy Bracelet",
+    "category": "midnight",
+    "type": "bracelets",
+    "material": "silver",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 02 - 03.png",
+    "description": "A tennis-style bracelet alternating between deep blue sapphires and VS1 clarity diamonds."
+  },
+  {
+    "id": 8,
+    "name": "Coastal Pearl Enclave",
+    "category": "aura",
+    "type": "necklaces",
+    "material": "gems",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 27 - 01.png",
+    "description": "Hand-picked South Sea pearl set within a textured gold 'shell' inspired by the Negombo shorelines."
+  },
+  {
+    "id": 9,
+    "name": "Heritage Gold Choker",
+    "category": "royal",
+    "type": "necklaces",
+    "material": "gold",
+    "price": "Price on Inquiry",
+    "image": "images/Single Image Posts/Product 14 - 01.png",
+    "description": "A heavy 22k gold statement piece, recreating 19th-century Ceylonese royal patterns for the modern woman."
+  }
+]

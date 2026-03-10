@@ -1,0 +1,26 @@
+/*
+  Jewel Exchange Stylesheet Manifest
+  ------------------------------------------------------------
+  This file only orchestrates module loading order.
+  CSS rules are unchanged and moved into categorized files.
+
+  Order is intentional and matches the original cascade exactly.
+*/
+
+/* 1) Global foundations + shared components */
+@import url('./sections/01-core-foundation.css');
+
+/* 2) About page styles */
+@import url('./sections/02-about-page.css');
+
+/* 3) Bespoke page styles */
+@import url('./sections/03-bespoke-page.css');
+
+/* 4) Jewelry + gemstone collection pages */
+@import url('./sections/04-collections-pages.css');
+
+/* 5) Contact page styles */
+@import url('./sections/05-contact-page.css');
+
+/* 6) Home page + shared product/drawer patterns */
+@import url('./sections/06-home-and-drawer.css');
