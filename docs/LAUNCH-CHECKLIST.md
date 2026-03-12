@@ -15,6 +15,7 @@ Track progress here and check items off as they are completed.
 - [x] Replaced placeholder phone/contact details with final business details
 - [x] Added legal pages (`privacy-policy.html`, `terms.html`) and linked in footer
 - [x] Verified Formspree endpoint receives submissions
+- [x] Added navbar live search (products + gemstones)
 
 ## ⏳ Pending (No Business Input Needed)
 
@@ -30,6 +31,8 @@ Track progress here and check items off as they are completed.
 - [ ] Keyboard-only accessibility pass
 - [ ] Lighthouse pass (Performance, SEO, Accessibility, Best Practices)
 - [ ] Production smoke test on deployed URL
+- [ ] Verify navbar search results, routing, and drawer open behavior
+- [ ] Verify lazy loading for non-hero images and eager loading for logo/hero
 
 ## 🚀 Post-Launch
 
