@@ -1,7 +1,7 @@
 /* --- 14. REDESIGNED ABOUT PAGE STYLES --- */
 
 body.about-theme {
-    background: #fbf7ef;
+    background: linear-gradient(180deg, #fffefb 0%, #faf5eb 52%, #ffffff 100%);
 }
 
 /* Tighten vertical rhythm for about sections */
@@ -85,6 +85,12 @@ body.about-theme {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgba(255, 255, 255, 0.66);
+    border: 1px solid rgba(197, 160, 89, 0.22);
+    padding: 22px 18px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 12px 30px rgba(26, 26, 26, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .stat-number {
@@ -136,9 +142,12 @@ body.about-theme {
 
 .image-frame-accent {
     position: relative;
-    border: 2px solid var(--primary-gold);
+    border: 1px solid rgba(197, 160, 89, 0.46);
     padding: 20px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 18px 42px rgba(26, 26, 26, 0.08);
 }
 
 .image-frame-accent::before {
@@ -188,9 +197,12 @@ body.about-theme {
     position: absolute;
     bottom: 30px;
     left: 30px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(197, 160, 89, 0.28);
     padding: 20px 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     gap: 12px;
@@ -223,11 +235,11 @@ body.about-theme {
 }
 
 .highlight-item {
-    background: #fff9ef;
+    background: linear-gradient(160deg, rgba(255,255,255,0.92) 0%, rgba(252,247,237,0.88) 100%);
     padding: 30px;
     border-left: 3px solid var(--primary-gold);
     transition: var(--transition);
-    box-shadow: 0 10px 24px rgba(26, 26, 26, 0.05);
+    box-shadow: 0 12px 26px rgba(26, 26, 26, 0.07);
 }
 
 .highlight-item:hover {
@@ -279,12 +291,14 @@ body.about-theme {
 }
 
 .pillar-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.82);
     padding: 50px 40px;
-    border: 1px solid var(--light-gray);
+    border: 1px solid rgba(197, 160, 89, 0.24);
     transition: var(--transition);
     text-align: center;
-    box-shadow: 0 12px 28px rgba(26, 26, 26, 0.06);
+    box-shadow: 0 12px 28px rgba(26, 26, 26, 0.06), inset 0 1px 0 rgba(255,255,255,0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .pillar-card:hover {
@@ -403,12 +417,14 @@ body.about-theme {
 }
 
 .timeline-content {
-    background: linear-gradient(180deg, var(--white) 0%, #fbf8f2 100%);
-    border: 1px solid var(--light-gray);
-    box-shadow: 0 16px 34px rgba(26, 26, 26, 0.06);
+    background: linear-gradient(170deg, rgba(255,255,255,0.92) 0%, rgba(251,248,242,0.88) 100%);
+    border: 1px solid rgba(197, 160, 89, 0.22);
+    box-shadow: 0 16px 34px rgba(26, 26, 26, 0.08), inset 0 1px 0 rgba(255,255,255,0.74);
     padding: 28px 30px;
     min-height: 170px;
     position: relative;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .timeline-content::before {
@@ -495,12 +511,15 @@ body.about-theme {
 }
 
 .commitment-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.84);
     padding: 40px;
     border-left: 4px solid var(--primary-gold);
     text-align: center;
     transition: var(--transition);
-    box-shadow: 0 10px 26px rgba(26, 26, 26, 0.06);
+    box-shadow: 0 12px 28px rgba(26, 26, 26, 0.07), inset 0 1px 0 rgba(255,255,255,0.75);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .commitment-card:hover {

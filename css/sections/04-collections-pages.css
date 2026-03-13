@@ -200,6 +200,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
     padding: 0;
+    align-items: stretch;
 }
 
 /* Enhanced Jewelry Card */
@@ -209,15 +210,29 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(160deg, rgba(255,255,255,0.96) 0%, rgba(251,247,239,0.92) 100%);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    box-shadow: 0 4px 14px rgba(26, 26, 26, 0.08), inset 0 1px 0 rgba(255,255,255,0.75);
 }
 
 .card-img {
     position: relative;
     height: 400px;
     overflow: hidden;
-    background: var(--off-white);
+    background: radial-gradient(circle at 62% 38%, #fef5e7 0%, #fcfcfc 68%, #f7f2e8 100%);
     margin-bottom: 20px;
-    border: 1px solid var(--light-gray);
+    border: 1px solid rgba(197, 160, 89, 0.16);
+}
+
+.card-img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 24%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.32) 0%, transparent 100%);
+    pointer-events: none;
 }
 
 .card-img img {
@@ -234,6 +249,8 @@
 
 .jewelry-card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 14px 32px rgba(197, 160, 89, 0.2), 0 30px 48px rgba(26, 26, 26, 0.12);
+    border-color: rgba(197, 160, 89, 0.45);
 }
 
 .card-info {
@@ -285,7 +302,9 @@
 .inquire-btn:hover {
     background: var(--primary-gold);
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(197, 160, 89, 0.3);
 }
 
 /* Enhanced Detail Drawer */
@@ -389,16 +408,10 @@
 }
 
 .btn-gold {
-    background: var(--primary-gold);
-    color: white;
     padding: 16px 30px;
-    text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.9rem;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: 600;
+    transition: var(--transition-snappy);
     display: block;
     text-align: center;
     width: 100%;
@@ -406,8 +419,7 @@
 }
 
 .btn-gold:hover {
-    background: var(--dark-charcoal);
-    letter-spacing: 3px;
+    letter-spacing: 2.3px;
 }
 
 /* Responsive Luxury Pages */

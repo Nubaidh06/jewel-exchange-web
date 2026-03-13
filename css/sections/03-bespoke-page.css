@@ -68,13 +68,15 @@ body.bespoke-theme {
 }
 
 .process-step {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.84);
     padding: 40px 30px;
-    border: 1px solid var(--light-gray);
+    border: 1px solid rgba(197, 160, 89, 0.24);
     text-align: center;
     transition: var(--transition);
     position: relative;
-    box-shadow: 0 10px 26px rgba(26, 26, 26, 0.06);
+    box-shadow: 0 12px 28px rgba(26, 26, 26, 0.07), inset 0 1px 0 rgba(255,255,255,0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .process-step:hover {
@@ -162,13 +164,15 @@ body.bespoke-theme {
 }
 
 .advantage-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.82);
     padding: 45px 35px;
-    border: 1px solid var(--light-gray);
+    border: 1px solid rgba(197, 160, 89, 0.24);
     text-align: center;
     transition: var(--transition);
     border-top: 4px solid transparent;
-    box-shadow: 0 10px 24px rgba(26, 26, 26, 0.05);
+    box-shadow: 0 12px 26px rgba(26, 26, 26, 0.07), inset 0 1px 0 rgba(255,255,255,0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .advantage-card:hover {
@@ -288,10 +292,12 @@ body.bespoke-theme {
 }
 
 .studio-form-card {
-    background: #fffdf8;
-    border: 1px solid var(--light-gray);
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(197, 160, 89, 0.24);
     padding: 35px;
-    box-shadow: 0 12px 28px rgba(26, 26, 26, 0.06);
+    box-shadow: 0 16px 34px rgba(26, 26, 26, 0.08), inset 0 1px 0 rgba(255,255,255,0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .bespoke-form-practical {
@@ -338,22 +344,24 @@ body.bespoke-theme {
 }
 
 .btn-gold-action {
-    background: var(--primary-gold);
+    background: linear-gradient(140deg, #cfad69 0%, #b88e45 100%);
     color: var(--white);
-    border: 1px solid var(--primary-gold);
+    border: 1px solid rgba(197, 160, 89, 0.9);
     padding: 16px 30px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 0.82rem;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition-snappy);
+    box-shadow: 0 10px 24px rgba(197, 160, 89, 0.28);
 }
 
 .btn-gold-action:hover {
-    background: #b08f4f;
-    border-color: #b08f4f;
+    background: linear-gradient(140deg, #d7b777 0%, #bf944f 100%);
+    border-color: rgba(197, 160, 89, 0.96);
     transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(197, 160, 89, 0.34), 0 0 22px rgba(197, 160, 89, 0.22);
 }
 
 .btn-gold-action:focus-visible {
@@ -376,13 +384,14 @@ body.bespoke-theme {
 
 .perk {
     padding: 15px;
-    background: #fff9ef;
+    background: linear-gradient(160deg, rgba(255,255,255,0.92) 0%, rgba(252,247,237,0.86) 100%);
     border-left: 3px solid var(--primary-gold);
     font-size: 0.95rem;
     display: flex;
     align-items: center;
     gap: 12px;
     color: var(--dark-charcoal);
+    box-shadow: 0 8px 22px rgba(26, 26, 26, 0.06);
 }
 
 @media (max-width: 1024px) {

@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         products: 'data/products.json',
         gemstones: 'data/gemstones.json'
     };
-    const whatsappNumber = siteConfig.whatsappNumber || '94773534538';
-    const instagramUrl = (siteConfig.social && siteConfig.social.instagram) || 'https://www.instagram.com/jewelexchange_sl/';
     
     // --- Helper Function: Toggle Body Scroll ---
     const toggleBodyScroll = (isLocked) => {
@@ -151,8 +149,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, { threshold: 0.1 });
 
         const targets = document.querySelectorAll('.reveal, section, .jewelry-card, .product-card, .pillar-item, .mosaic-card, .value-item');
+        let staggerIndex = 0;
         targets.forEach(el => {
             if (!el.classList.contains('reveal')) el.classList.add('reveal');
+
+            const isStaggerTarget = el.matches('.product-card, .jewelry-card, .value-card-home, .pillar-card, .advantage-card, .timeline-item, .process-step');
+            if (isStaggerTarget) {
+                const delay = Math.min(staggerIndex * 60, 360);
+                el.style.setProperty('--reveal-delay', `${delay}ms`);
+                staggerIndex += 1;
+            } else {
+                el.style.setProperty('--reveal-delay', '0ms');
+            }
+
             observer.observe(el);
         });
     };

@@ -5,8 +5,64 @@
  */
 
 const SITE_CONFIG = window.JE_CONFIG || {};
-const WHATSAPP_NUMBER = SITE_CONFIG.whatsappNumber || '94773534538';
-const INSTAGRAM_URL = (SITE_CONFIG.social && SITE_CONFIG.social.instagram) || 'https://www.instagram.com/jewelexchange_sl/';
+const WHATSAPP_NUMBER = SITE_CONFIG.whatsappNumber || '';
+const WHATSAPP_BASE_URL = SITE_CONFIG.whatsappBaseUrl || (WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}` : '');
+const INSTAGRAM_URL = (SITE_CONFIG.social && SITE_CONFIG.social.instagram) || '';
+const FACEBOOK_URL = (SITE_CONFIG.social && SITE_CONFIG.social.facebook) || '';
+const TIKTOK_URL = (SITE_CONFIG.social && SITE_CONFIG.social.tiktok) || '';
+const BUSINESS = SITE_CONFIG.business || {};
+
+function buildWhatsAppUrl(message, phoneNumber = WHATSAPP_NUMBER) {
+    if (!phoneNumber) return '';
+    const baseUrl = WHATSAPP_BASE_URL || `https://wa.me/${phoneNumber}`;
+    if (!message) return baseUrl;
+    const waUrl = new URL(baseUrl);
+    waUrl.searchParams.set('text', message);
+    return waUrl.toString();
+}
+
+/**
+ * Hydrates repeated social and WhatsApp links from centralized config values.
+ * This keeps page markup stable while removing hardcoded link drift.
+ */
+function hydrateBusinessLinks() {
+    const linkMap = {
+        instagram: INSTAGRAM_URL,
+        facebook: FACEBOOK_URL,
+        tiktok: TIKTOK_URL,
+        whatsapp: WHATSAPP_BASE_URL
+    };
+
+    document.querySelectorAll('a[data-business-link]').forEach((anchor) => {
+        const key = anchor.dataset.businessLink;
+        const targetHref = linkMap[key];
+        if (!targetHref) return;
+
+        if (key !== 'whatsapp') {
+            anchor.href = targetHref;
+            return;
+        }
+
+        let text = '';
+        try {
+            const currentUrl = new URL(anchor.href, window.location.origin);
+            text = currentUrl.searchParams.get('text') || '';
+        } catch (_) {
+            text = '';
+        }
+
+        anchor.href = buildWhatsAppUrl(text) || anchor.href;
+    });
+}
+
+function hydrateBusinessContent() {
+    document.querySelectorAll('[data-business-text]').forEach((node) => {
+        const key = node.dataset.businessText;
+        const value = BUSINESS[key];
+        if (!value) return;
+        node.textContent = value;
+    });
+}
 
 // ============================================================================
 // FORM VALIDATION UTILITIES
@@ -308,7 +364,8 @@ function generateWhatsAppMessage(productName, productDetails) {
  * @param {string} message - Message to send
  */
 function openWhatsApp(phoneNumber = WHATSAPP_NUMBER, message = '') {
-    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    const url = buildWhatsAppUrl(message, phoneNumber);
+    if (!url) return;
     window.open(url, '_blank');
 }
 
@@ -768,7 +825,7 @@ function openDetailDrawer(product) {
             ? `Hi Jewel Exchange, I'm interested in the "${product.name}" listed at ${product.price}. Could you provide more details?`
             : `Hi, I'm interested in: ${product.name}`
     );
-    whatsappLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    whatsappLink.href = buildWhatsAppUrl(message) || whatsappLink.href;
 
     const instagramLink = document.getElementById('instagram-link');
     if (instagramLink) {
@@ -787,6 +844,9 @@ function openDetailDrawer(product) {
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', function () {
+    hydrateBusinessLinks();
+    hydrateBusinessContent();
+
     // Attach form submission handlers to all forms
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {

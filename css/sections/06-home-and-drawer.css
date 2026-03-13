@@ -2,16 +2,18 @@
 
 /* Featured Collections Section */
 .home-featured-collections {
-    background: var(--white);
+    background: linear-gradient(180deg, #fffefb 0%, #fbf8f2 100%);
     padding: 52px 0 48px;
     position: relative;
 }
 
 .featured-salon-panel {
     position: relative;
-    background: linear-gradient(to bottom, #fffdfa 0%, #fffefc 100%);
-    border: 1px solid rgba(197, 160, 89, 0.35);
-    box-shadow: 0 16px 36px rgba(26, 26, 26, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(197, 160, 89, 0.38);
+    box-shadow: 0 16px 36px rgba(26, 26, 26, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 38px 34px 34px;
     width: 100vw;
     margin-left: calc(50% - 50vw);
@@ -97,7 +99,7 @@
 
 /* Heritage Section */
 .home-heritage-section {
-    background: var(--white);
+    background: linear-gradient(180deg, #ffffff 0%, #fdf9f1 100%);
     padding: 60px 0 54px;
     position: relative;
 }
@@ -144,13 +146,15 @@
 }
 
 .value-card-home {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.82);
     padding: 30px 32px;
     border-radius: 4px;
     border-left: 3px solid var(--primary-gold);
     border-top: 1px solid rgba(197, 160, 89, 0.32);
     transition: var(--transition);
     box-shadow: 0 8px 22px rgba(26, 26, 26, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .value-card-home:hover {
@@ -460,30 +464,42 @@
 
 /* Product Card Styling (Dynamic via JS) */
 .product-card {
-    background: white;
-    border: 1px solid var(--light-gray);
+    background: linear-gradient(160deg, rgba(255,255,255,0.96) 0%, rgba(251,247,239,0.92) 100%);
+    border: 1px solid rgba(197, 160, 89, 0.24);
     border-radius: 4px;
     overflow: hidden;
     transition: var(--transition);
     display: flex;
     flex-direction: column;
     height: 100%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 14px rgba(26, 26, 26, 0.08), inset 0 1px 0 rgba(255,255,255,0.75);
 }
 
 .product-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(197, 160, 89, 0.15);
+    box-shadow: 0 14px 32px rgba(197, 160, 89, 0.2), 0 30px 48px rgba(26, 26, 26, 0.12);
+    border-color: rgba(197, 160, 89, 0.45);
 }
 
 .product-image-wrapper {
     position: relative;
     height: 350px;
     overflow: hidden;
-    background: var(--off-white);
+    background: radial-gradient(circle at 62% 38%, #fef5e7 0%, #fcfcfc 68%, #f7f2e8 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.product-image-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 22%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.32) 0%, transparent 100%);
+    pointer-events: none;
 }
 
 .product-image {
@@ -561,6 +577,7 @@
     background: var(--primary-gold);
     color: white;
     transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(197, 160, 89, 0.3);
 }
 
 @media (max-width: 480px) {

@@ -150,25 +150,16 @@
 }
 
 .btn-gold {
-    background: var(--primary-gold);
-    color: white;
     padding: 16px 40px;
-    text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.9rem;
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-    font-weight: 600;
+    transition: var(--transition-snappy);
     align-self: flex-start;
     margin-top: 10px;
 }
 
 .btn-gold:hover {
-    background: var(--dark-charcoal);
-    letter-spacing: 3px;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    letter-spacing: 2.3px;
 }
 
 /* Map Container */

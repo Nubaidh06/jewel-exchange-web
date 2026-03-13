@@ -26,7 +26,6 @@ This guide keeps day-to-day edits predictable and safe.
 - `js/site-config.js` — Shared runtime constants (WhatsApp, data file paths)
 - `js/main.js` — Navigation, data loading, grid rendering, filtering, drawer interactions, navbar search
 - `js/utilities.js` — Form validation, utility helpers, optional product helpers
-- `docs/legacy/gallery.js` — Legacy gallery script (archived)
 
 ## Data
 
